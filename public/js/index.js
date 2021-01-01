@@ -77,7 +77,7 @@ fileURL.addEventListener("click", () => {
 });
 
 const uploadFile = () => {
-  console.log("file added uploading");
+  // console.log("file added uploading");
 
   files = fileInput.files;
   const formData = new FormData();
@@ -117,7 +117,7 @@ const uploadFile = () => {
 };
 
 const onFileUploadSuccess = (res) => {
-    console.log('jiuhy');
+    // console.log('jiuhy');
   fileInput.value = ""; // reset the input
   status.innerText = "Uploaded";
   showToast("File uploded successfully");
@@ -125,9 +125,9 @@ const onFileUploadSuccess = (res) => {
   emailForm[2].removeAttribute("disabled");
   emailForm[2].innerText = "Send";
   progressContainer.style.display = "none"; // hide the box
-    console.log(res);
+    // console.log(res);
   const {url } = JSON.parse(res);
-  console.log(url);
+  // console.log(url);
   sharingContainer.style.display = "block";
   fileURL.value = url;
 };
