@@ -7,6 +7,7 @@ const connectdb = ()=>{
     }else{
         url = process.env.MONGO_CON_PROD;
     }
+    console.log(url);
     mongoose.connect(url,{useNewUrlParser:true,useCreateIndex:true,useFindAndModify:true,useUnifiedTopology:true});
     const connection = mongoose.connection;
     connection.once('open',()=>{
